@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.xworkz.engine.EngineClass" id="engineClass">
+		
+		
+		
+		<property name="engineName" value="CarEngine"></property>
+		<property name="type" value="DEISELENGINE"></property>
+		<property name="numberCylinders" value="4"></property>
+		<property name="engineOil" ref="oil"></property>
+		<property name="cubicCapacity" value="1000" ></property>
+		<property name="connectingRod" ref="rod"></property>
+			
+	</bean>
+
+	<bean class="com.xworkz.engine.EngineOil" id="oil">
+	<property name="price" value="700.00"></property>
+	<property name="brand" value="castrolEngine"></property>
+	<property name="grade" value="10W"></property>
+	
+	</bean>
+	
+	<bean class="com.xworkz.engine.ConnectingRod" id="rod"></bean>
+
+
+</beans>
